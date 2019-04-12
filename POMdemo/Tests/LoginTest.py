@@ -23,6 +23,9 @@ class LoginTests(unittest.TestCase):
         homepage = HomePage(driver)
         homepage.click_welcome()
         homepage.click_logout()
+
+
+
         # self.driver.find_element_by_id("txtUsername").send_keys("Admin")
         # self.driver.find_element_by_id("txtPassword").send_keys("admin123")
         # self.driver.find_element_by_id("btnLogin").click()

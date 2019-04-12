@@ -1,12 +1,13 @@
+from POMdemo.locators.locators import Locators
 class LoginPage():
 
 
     def __init__(self, driver):
         self.driver = driver
 
-        self.username_textbox_id = "txtUsername"
-        self.password_textbox_id = "txtPassword"
-        self.login_button = "btnLogin"
+        self.username_textbox_id = Locators.username_textbox_id
+        self.password_textbox_id = Locators.password_textbox_id
+        self.login_button = Locators.login_button
 
     def enter_username(self, username):
         self.driver.find_element_by_id(self.username_textbox_id).clear()
