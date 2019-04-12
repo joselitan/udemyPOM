@@ -1,8 +1,13 @@
 from selenium import webdriver
 import time
 import unittest
+import sys
+import os
+sys.path.append(os.path.join(os.path.dirname(__file__), "..", ".."))
 from POMdemo.Pages.loginPage import LoginPage
 from POMdemo.Pages.homePage import HomePage
+import HtmlTestRunner
+
 
 class LoginTests(unittest.TestCase):
 
@@ -38,5 +43,10 @@ class LoginTests(unittest.TestCase):
         cls.driver.close()
         cls.driver.quit()
         print("Test completed")
+
+if __name__ == '__main__':
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output='C:/udemyPOM/reports'))
+    # unittest.main()
+
 
 
